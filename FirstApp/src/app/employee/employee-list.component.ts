@@ -7,6 +7,7 @@ import {IEmployee} from './employee.interface';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
+  srv = 'all';
   employee: IEmployee [] = [
     {
 
@@ -65,4 +66,8 @@ export class EmployeeListComponent implements OnInit {
     return this.employee.filter(e => e.gender === 'Female').length;
   }
 
+ OnRadioButtonValueChanged(value: string) {
+    console.log(value);
+    this.srv = value;
+ }
 }
