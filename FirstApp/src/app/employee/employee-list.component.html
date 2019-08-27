@@ -1,0 +1,28 @@
+<h1>Employee Details</h1>
+
+<app-employee-count [all]="getAllEmployeesCount()"
+[male]="getMaleEmployeesCount()"
+[female]="getFemaleEmployeesCount()" >
+</app-employee-count>
+
+<br>
+<br>
+<table id="customers" border="1">
+  <tr>
+    <th>Employee Code</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Annual Salary</th>
+    <th>Date of Birth</th>
+  </tr>
+
+  <tr *ngFor="let emp of employee" >
+      <td> {{emp.code}} </td>
+      <td> {{emp.name}} </td>
+      <td> {{emp.gender}} </td>
+      <td> {{emp.annualSalary}} </td>
+      <td> {{emp.dateOfBirth}} </td>
+    </tr>
+
+</table>
+
