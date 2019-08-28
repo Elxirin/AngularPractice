@@ -7,7 +7,10 @@
 
 <br>
 <br>
-<table id="customers" border="1">
+<input type="text" [(ngModel)]='searchTerm' >
+<br>
+<br>
+<table id="customers" border="1" >
   <tr>
     <th>Employee Code</th>
     <th>Name</th>
@@ -15,16 +18,17 @@
     <th>Annual Salary</th>
     <th>Date of Birth</th>
   </tr>
-<ng-container *ngFor="let emp of employee">
+<ng-container *ngFor="let emp of employee | employeeFilter:searchTerm"  >
 
 
   <tr  *ngIf='srv=="all" || srv==emp.gender' >
-      <td> {{emp.code}} </td>
-      <td> {{emp.name}} </td>
-      <td> {{emp.gender}} </td>
-      <td> {{emp.annualSalary}} </td>
-      <td> {{emp.dateOfBirth}} </td>
+      <td> {{emp.code | uppercase }} </td>
+      <td> {{emp.name | employeeTitlePipe:emp.gender}} </td>
+      <td> {{emp.gender | lowercase}} </td>
+      <td> {{emp.annualSalary | currency:'INR'}} </td>
+      <td> {{emp.dateOfBirth|date:'dd/MM/y  '}} </td>
     </tr>
   </ng-container>
 </table>
+<br>
 

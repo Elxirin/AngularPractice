@@ -10,6 +10,11 @@ import { FormsModule } from '@angular/forms';
 import { EmployeeListComponent } from './employee/employee-list.component';
 import { EmpComponent } from './emp/emp.component';
 import { EmployeeCountComponent } from './employee/employee-count.component';
+import { ColorDirectiveDirective } from './color-directive.directive';
+import { ChangeCaseDirective } from './change-case.directive';
+import { DemoDirective } from './demo.directive';
+import { EmployeeTitlePipePipe } from './employee/employeeTitle/employee-title-pipe.pipe';
+import { EmployeeFilterPipe } from './employee/employee-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { EmployeeCountComponent } from './employee/employee-count.component';
     EmployeeComponent,
     EmployeeListComponent,
     EmpComponent,
-    EmployeeCountComponent
+    EmployeeCountComponent,
+    ColorDirectiveDirective,
+    ChangeCaseDirective,
+    DemoDirective,
+    EmployeeTitlePipePipe,
+    EmployeeFilterPipe
   ],
   imports: [
     BrowserModule,
