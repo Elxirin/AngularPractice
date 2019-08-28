@@ -8,7 +8,7 @@ import { FormGroup, FormControl, Validator, Validators } from '@angular/forms';
 })
 export class FormtwoComponent implements OnInit {
   userForm: FormGroup = new FormGroup({
-    name: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(10)]), email: new FormControl(),
+    name: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(10)]), email: new FormControl(),
     address: new FormGroup({
       street: new FormControl(), city: new FormControl(), pincode: new FormControl(null, Validators.pattern("[1-9][0-9]{5}"))
     })
