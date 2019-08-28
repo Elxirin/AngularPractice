@@ -1,0 +1,40 @@
+<div class="container" id="frm">
+        <h1>User details</h1>
+        <form #userForm='ngForm' (ngSubmit)='processForm(userForm.value)'>
+          <div class="form-group">
+            <label for="">Name</label>
+            <input class="form-control" #nameRef='ngModel' name="name" ngModel type="text" placeholder="Enter your Name" minlength="3" required>
+            <div *ngIf ="nameRef.errors && nameRef.touched" > 
+                <div [hidden]='!nameRef.errors.required' class="al" >*Please Enter a name</div>
+                <div [hidden]='!nameRef.errors.minlength' class="al" >*Name should contain atleast 3 Characters</div>
+            </div>
+          </div>
+      
+          <div class="form-group">
+            <label for="">Email</label>
+            <input class="form-control" #emailRef name="email" ngModel type="text" placeholder="Enter your email" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div ngModelGroup="Address">
+            <div class="form-group">
+              <label for="">Street</label>
+              <input class="form-control" #streetRef name="street" ngModel type="text" placeholder="Enter the street">
+            </div>
+      
+            <div class="form-group">
+              <label for="">City</label>
+              <input class="form-control" #cityRef name="city" ngModel type="text" placeholder="Enter the city" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="">Pin Code</label>
+              <input class="form-control" #pincodeRef='ngModel' name="pincode" ngModel type="text" placeholder="Enter the pin code" pattern="[1-9][0-9]{5}" required>
+              <div *ngIf='pincodeRef.errors && pincodeRef.touched' class="al" >PinCode should be 6 digits</div>
+            </div>
+          </div>
+      
+          <div class="btn-group">
+            <button [disabled]='!userForm.valid' type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>

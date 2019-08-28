@@ -1,0 +1,20 @@
+#frm{
+    width: 50%;
+}
+
+input.ng-valid{
+    border-right: 5px solid green; 
+}
+
+
+
+input.ng-invalid {
+    border-right: 5px solid red;
+}
+
+.al{
+    color: red;
+    background-color: lightpink;
+    border-radius: 3px;
+    padding-left: 10px;
+}
