@@ -9,13 +9,17 @@ import { HomeComponent } from './employee/home/home.component';
 import { EmployeeListComponent } from './employee/list/employee-list.component';
 import { AddEmployeeComponent } from './employee/add/add-employee.component';
 import { EmployeeService } from './employee/employee.service';
+import { EmployeeComponent } from './employee/emp/employee.component';
+import { SearchEmployeeComponent } from './employee/srch/search-employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     EmployeeListComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    EmployeeComponent,
+    SearchEmployeeComponent
   ],
   imports: [
     BrowserModule,

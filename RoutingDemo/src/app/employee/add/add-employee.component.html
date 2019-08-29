@@ -1,44 +1,48 @@
-<div class="container" id="addFrm" >
-    <br>
-    <h2>Add Employee</h2>
-    <br>
-    <form #userForm='ngForm' (ngSubmit)="onSubmit(userFomr.value)">
-        <div class="from-group row" >
-            <label class="col-sm-2 col-form-label">Employee Code</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" name="code" placeholder="Enter your Employee code" ngModel >   
-            </div>
+<div class="card" id="crd">
+  <div class="card-body">
+    <div class="container" id="crd">
+      <br>
+      <h2>Add Employee</h2>
+      <br>
+      <form #userForm='ngForm' (ngSubmit)="onSubmit(userForm.value)">
+        <div class="from-group row">
+          <label class="col-sm-2 col-form-label">Employee Code</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" name="code" placeholder="Enter your Employee code" ngModel>
+          </div>
         </div>
         <br>
-        <div class="from-group row" >
-            <label class="col-sm-2 col-form-label">Name</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" name="name" placeholder="Enter your Name" ngModel >
-            </div>
+        <div class="from-group row">
+          <label class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" name="name" placeholder="Enter your Name" ngModel>
+          </div>
         </div>
         <br>
-        <div class="from-group row" >
-            <label class="col-sm-2 col-form-label">Gender</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" name="gender" placeholder="Enter Gender" ngModel >   
-            </div>
+        <div class="from-group row">
+          <label class="col-sm-2 col-form-label">Gender</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" name="gender" placeholder="Enter Gender" ngModel>
+          </div>
         </div>
         <br>
-        <div class="from-group row" >
-            <label class="col-sm-2 col-form-label">Annual Salary</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" name="annualSalary" placeholder="Enter annual salary" ngModel >       
-            </div>
+        <div class="from-group row">
+          <label class="col-sm-2 col-form-label">Annual Salary</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" name="annualSalary" placeholder="Enter annual salary" ngModel>
+          </div>
         </div>
         <br>
-        <div class="from-group row" >
-            <label class="col-sm-2 col-form-label">Date of Birth</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" name="dateOfBirth" placeholder="Enter Date of birth" ngModel >
-            </div>
+        <div class="from-group row">
+          <label class="col-sm-2 col-form-label">Date of Birth</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" name="dateOfBirth" placeholder="Enter Date of birth" ngModel>
+          </div>
         </div>
         <br>
-        <button type="submit"  class="btn btn-primary col-sm-1">Add</button>
-        <button type="reset" class="btn btn-primary col-sm-1" style="margin-left: 20px">Reset</button>
-    </form>
+        <button type="submit" class="btn btn-primary col-sm-2">Add</button>
+        <button type="reset" class="btn btn-primary col-sm-2" style="margin-left: 20px">Reset</button>
+      </form>
+    </div>
+  </div>
 </div>

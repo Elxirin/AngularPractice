@@ -20,4 +20,12 @@ export class EmployeeService {
   getEmployees(): Employee[] {
     return this.employees;
   }
+
+  addEmployee(employee: Employee) {
+    this.employees.push(employee);
+  }
+
+  deleteEmployee(code): Employee[] {
+    return this.employees = this.employees.filter( emp => emp.code !== code );
+  }
 }

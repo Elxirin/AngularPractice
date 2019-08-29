@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
+import { Employee } from '../employee';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-employee',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEmployeeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private employeeService: EmployeeService, private router: Router) { }
 
   ngOnInit() {
   }
+
+  onSubmit(employee: Employee){
+    this.employeeService.addEmployee(employee);
+    this.router.navigate(['/employees']);
+  } 
 
 }
