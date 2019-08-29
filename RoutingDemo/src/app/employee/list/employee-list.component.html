@@ -1,0 +1,20 @@
+<div class="conatiner" >
+    <table class="table table-striped" id="tab" >
+        <tr>
+            <th>Employee Code</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Annual Salary</th>
+            <th>Date of Birth</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor='let employee of employees' >
+                <td> {{employee.code}} </td>
+                <td> {{employee.name}} </td>
+                <td> {{employee.gender}} </td>
+                <td> {{employee.annualSalary}} </td>
+                <td> {{employee.dateOfBirth}} </td>
+                <td> <button class="btn btn-secondary" >Delete</button></td>
+        </tr>
+    </table>
+</div>
