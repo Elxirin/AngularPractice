@@ -1,0 +1,9 @@
+th{
+    color: purple;
+    text-decoration-color: purple;
+    text-decoration: underline;    
+}
+
+label{
+    cursor: pointer;
+}

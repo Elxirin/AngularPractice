@@ -1,0 +1,23 @@
+<div class="card"  style="margin-top: 30px; width: 70%;" >
+    <div class="card-body" >
+       <div class="contaiiner" >
+            <h3>Employee Data</h3>
+            <table class="table table-striped"  >
+                <tr>
+                        <th scope="col"><label (click)="sort('empId')" id="id"><u>ID</u></label></th>
+                        <th scope="col"><label (click)="sort('empName')" id="name"><u>NAME</u></label></th>
+                        <th scope="col"><label (click)="sort('empSal')"  id="salary"><u>SALARY</u></label></th>
+                        <th scope="col"><label (click)="sort('empDep')" id="dep"><u>DEPARTMENT</u></label></th>
+                </tr>
+                <tbody>
+                <tr *ngFor='let emp of employees' >
+                    <td> {{emp.empId}} </td>
+                    <td> {{emp.empName}} </td>
+                    <td> {{emp.empSal}} </td>
+                    <td> {{emp.empDep}} </td>
+                </tr>
+            </tbody>
+            </table>
+       </div>
+    </div>
+</div>
